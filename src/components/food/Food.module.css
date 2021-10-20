@@ -1,0 +1,44 @@
+.food{
+    padding: 16px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.desc{
+    font-style: italic;
+}
+.price{
+    color:#2d6a4f;
+    font-weight: bold;
+    margin-top:5px;
+}
+.li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+input{
+    width: 30px;
+}
+.qty{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    display: block;
+    padding: 0.2rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border:none;
+    background-color: #2d6a4f;
+    color:white;
+    cursor: pointer;
+}
+label{
+    font-weight: bold;
+margin-right: 5px;
+}
