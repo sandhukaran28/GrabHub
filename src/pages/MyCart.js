@@ -20,6 +20,10 @@ const MyCart = () => {
     //     },0 );
     // }
 
+    const placeOrderHandler = ()=>{
+        cartCtx.placeOrder();
+    }
+
   
 
     return (
@@ -42,7 +46,7 @@ const MyCart = () => {
                         </div>
                     </li>
                 })}
-                <li className={styles.total}>Total Amount: ${totalPrice}</li>
+                <li className={styles.total}>Total Amount: ${totalPrice}<span className={styles['place-order-btn']}><button onClick={placeOrderHandler}>Place Order</button></span> </li>
             </ul>
         </div>
     )

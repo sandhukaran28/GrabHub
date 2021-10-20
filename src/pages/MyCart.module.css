@@ -52,4 +52,7 @@ ul{
     margin:5px 0px;
     color: #2d6a4f;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

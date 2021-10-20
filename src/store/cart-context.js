@@ -1,7 +1,8 @@
 import React, {
     createContext,
     useState
-} from 'react'
+} from 'react';
+import axios from 'axios';
 
 const CartContext = createContext({
     cart: [],
@@ -36,7 +37,15 @@ export const CartContextProvider = (props) => {
         })
     }
 
-    const placeOrderHandler = (itemId) => {
+    const placeOrderHandler = async() => {
+        
+        if(cart.length>0){
+
+            await axios.post('http://localhost:8000/placeorder',{cart});
+            setCart(()=>{
+                return [];
+            })
+        }
 
     }
 
@@ -49,13 +58,9 @@ export const CartContextProvider = (props) => {
         placeOrder: placeOrderHandler
     }
 
-    return ( <
-        CartContext.Provider value = {
-            context
-        } > {
-            props.children
-        } <
-        /CartContext.Provider>
+    return ( <CartContext.Provider value = {context}>
+    { props.children}
+     </CartContext.Provider>
     )
 }
 
