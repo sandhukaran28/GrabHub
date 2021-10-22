@@ -1,5 +1,6 @@
 import React, {
     createContext,
+    useEffect,
     useState
 } from 'react';
 import axios from 'axios';
@@ -15,13 +16,30 @@ const CartContext = createContext({
 
 
 
-
 export const CartContextProvider = (props) => {
 
-    const [cart, setCart] = useState([]);
+    const intialItems = JSON.parse(window.localStorage.getItem('cart')|| '[]');
+
+    const [cart, setCart] = useState(intialItems);
+
+useEffect(()=>{
+    window.localStorage.setItem('cart',JSON.stringify(cart));
+},[cart]);
+
+
+    
 
     const addItemHandler = (item) => {
-        setCart([...cart, item]);
+
+        setCart((prev)=>{
+            const isAvailable  = prev.some((cartItem)=>cartItem.id === item.id);
+
+            if(isAvailable){
+                return prev.map((cartItem)=> cartItem.id === item.id ? {...cartItem,qty:parseInt(cartItem.qty)+parseInt(item.qty)}:{...cartItem});
+
+            }
+            return [...prev,item];
+        });
         console.log(cart);
 
     }
