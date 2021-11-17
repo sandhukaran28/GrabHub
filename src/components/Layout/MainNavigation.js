@@ -8,6 +8,7 @@ const MainNavigation = () => {
            <ul className={styles.linkUl}>
                <li><NavLink exact to="/allfoods">Menu</NavLink></li>
                <li><NavLink exact to="/my-cart">Cart</NavLink></li>
+               <li><NavLink exact to="/admin-foods">Admin Login </NavLink></li>
            </ul>
        </nav>
     )

@@ -1,0 +1,27 @@
+.outer{
+    margin: 100px auto;
+    width: 40%;
+    background-color: #d8f3dc;
+    padding:20px;
+    border-radius: 10px;
+}
+.outer h1{
+    text-align: center;
+}
+.outer form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.addInput{
+    width: 80%;
+    margin-bottom: 25px;
+    height: 20px;
+    padding: 2px;
+    margin-top: 3px;
+}
+.outer form button{
+    width: 100px;
+}
