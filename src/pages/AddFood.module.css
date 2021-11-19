@@ -11,7 +11,7 @@
 .outer form{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     margin: 0px auto;
     margin-top: 20px;
 }
@@ -24,4 +24,7 @@
 }
 .outer form button{
     width: 100px;
+}
+.txtArea{
+    width: 80%;
 }

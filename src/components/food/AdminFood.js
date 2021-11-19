@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import { Link } from 'react-router-dom';
 import style from './Food.module.css';
 const AdminFood = (props) => {
 
@@ -19,7 +20,13 @@ const AdminFood = (props) => {
         </div>
         <div>
             <button onClick={deleteFood}>Delete</button>
-            <button>Edit</button>
+            <Link  exact to={{
+            pathname:"/editFood", state:{
+                foodId:props.id,
+                name:props.name,
+                desc:props.desc,
+                price:props.price
+          }}}><button>Edit</button></Link>
         </div>
         </li>
     )

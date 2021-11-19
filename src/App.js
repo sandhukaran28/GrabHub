@@ -5,6 +5,7 @@ import Layout from './components/Layout/Layout';
 import MyCart from './pages/MyCart';
 import AdminAllFoods from './pages/AdminAllFoods';
 import AddFood from './pages/AddFood';
+import EditFood from './pages/EditFood';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
       </Route>
       <Route path="/addFood">
       <AddFood/>
+      </Route>
+      <Route path="/editFood">
+      <EditFood/>
       </Route>
     </Switch>
     </Layout>
