@@ -10,12 +10,12 @@ const EditFood = () => {
     const[Fprice,setPrice] =useState([price]);
 
 
-    const editFood = (e)=>{
+    const editFood = async(e)=>{
         e.preventDefault();
         const  name = e.target.elements.name.value;
         const  desc = e.target.elements.desc.value;
         const price = e.target.elements.price.value;
-        axios.patch('http://localhost:8000/editFood',{id:foodId, name:name,desc:desc,price:price}).then(()=>{
+        await axios.patch('http://localhost:8000/editFood',{id:foodId, name:name,desc:desc,price:price}).then(()=>{
             alert('Food Edited Successfully');
         })
         .catch((e)=>{

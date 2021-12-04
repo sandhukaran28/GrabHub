@@ -7,6 +7,8 @@ import AdminAllFoods from './pages/AdminAllFoods';
 import AddFood from './pages/AddFood';
 import EditFood from './pages/EditFood';
 import axios from 'axios';
+import Register from './pages/Auth/Register';
+import Login from './pages/Auth/Login';
 
 axios.defaults.withCredentials=true;
 
@@ -31,6 +33,12 @@ function App() {
       </Route>
       <Route path="/editFood">
       <EditFood/>
+      </Route>
+      <Route path="/register">
+        <Register/>
+      </Route>
+      <Route path="/login">
+      <Login/>
       </Route>
     </Switch>
     </Layout>
