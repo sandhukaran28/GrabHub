@@ -6,7 +6,6 @@ import styles from './MyCart.module.css'
 const MyCart = () => {
 
     const cartCtx = useContext(CartContext);
-    const cart = cartCtx.cart;
     let totalPrice = 0;
 
     // if(cart.length === 1){

@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react'
 
- const AuthContext = createContext();
+ const AuthContext = createContext({
+     loggedIn:false,
+    getLoggedIn:async()=>{}    
+ });
 
 function AuthContextProvider(props){
 
@@ -18,7 +21,12 @@ function AuthContextProvider(props){
         getLoggedIn();
     },[]);
 
-    return <AuthContext.Provider value = {loggedIn,getLoggedIn}>
+    const authCtx ={
+        loggedIn:loggedIn,
+        getLoggedIn:getLoggedIn
+    };
+
+    return <AuthContext.Provider value = {authCtx}>
     {props.children}
     </AuthContext.Provider>
 }

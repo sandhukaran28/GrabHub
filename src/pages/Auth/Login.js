@@ -1,14 +1,16 @@
-    import React from 'react'
+    import React,{useContext} from 'react'
     import styles from './Register.module.css'
+    import { useHistory } from 'react-router'
     import axios from 'axios';
+    import AuthContext from '../../store/Auth-context';
 
     const Login = () => {
 
-        
+        const history = useHistory();
+        const cartCtx = useContext(AuthContext);        
     const UserformSubmit = async(e)=>{
 
     e.preventDefault();
-    console.log("here");
     const  email = e.target.elements.email.value;
     const pass = e.target.elements.pass.value;
     const data ={
@@ -22,6 +24,8 @@
     .catch((e)=>{
         console.log(e);
     })
+    await cartCtx.getLoggedIn();
+    history.push('/');
     }
 
         return (
