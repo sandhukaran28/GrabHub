@@ -28,11 +28,11 @@ const loggedIn  =authCtx.loggedIn;
       <Route path="/allfoods">
         <AllFoods/>
       </Route>
-      {loggedIn === true && <>
+      {loggedIn === true &&
         <Route path="/my-cart">
         <MyCart/>
       </Route>
-      </>}
+    }
       <Route path="/admin-foods">
       <AdminAllFoods/>
       </Route>
@@ -42,14 +42,16 @@ const loggedIn  =authCtx.loggedIn;
       <Route path="/editFood">
       <EditFood/>
       </Route>
-      {loggedIn === false && <>
+      {loggedIn === false && 
         <Route path="/register">
         <Register/>
       </Route>
+      }
+      {loggedIn === false &&  
       <Route path="/login">
       <Login/>
       </Route>
-      </>}
+      }
     </Switch>
     </Layout>
   );
