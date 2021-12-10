@@ -14,6 +14,7 @@ return (
         <li><NavLink exact to="/allfoods">Menu</NavLink></li>
         {(loggedIn === true && <>
             <li><NavLink exact to="/my-cart">Cart</NavLink></li>
+            <li><NavLink exact to="/my-orders">My Orders</NavLink></li>
            <li><Logout/></li>
         </>)}
 
