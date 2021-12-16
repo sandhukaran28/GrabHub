@@ -3,13 +3,14 @@ import {NavLink} from 'react-router-dom';
 import Logout from '../../pages/Auth/Logout';
 import AuthContext from '../../store/Auth-context';
 import styles from './MainNavigation.module.css';
-
+import {Navbar,Nav,Container,NavDropdown} from 'react-bootstrap'
 const MainNavigation = () => {
 
 const authCtx = useContext(AuthContext);
 const loggedIn  =authCtx.loggedIn;
 return (
-<nav>
+
+ <nav>
     <ul className={styles.linkUl}>
         <li><NavLink exact to="/allfoods">Menu</NavLink></li>
         {(loggedIn === true && <>
@@ -25,7 +26,7 @@ return (
         </>)}
     
     </ul>
-</nav>
+</nav> 
 )
 }
 

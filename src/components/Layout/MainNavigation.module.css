@@ -1,18 +1,17 @@
-:root{
-    --primary-color:#2d6a4f;
-}
 
 .linkUl{
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 nav{
     background-color: var(--primary-color);
-    padding: 10px 10%;
+    padding: 20px 10%;
 }

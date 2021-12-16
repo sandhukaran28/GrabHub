@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'
 import FoodList from '../components/food/FoodList';
-import MealsImage from '../assets/meals.jpg';
+import Banner from '../assets/banner.png';
 import styles from './AllFoods.module.css';
 
 function AllFoods() {
@@ -32,7 +32,7 @@ function AllFoods() {
     return (
         <div>
           <section className={styles.imageSecton}>
-          <img src={MealsImage} alt="imageFood" />
+          <img src={Banner} alt="imageFood" />
           </section>
             <FoodList foods={foods}/>
         </div>
