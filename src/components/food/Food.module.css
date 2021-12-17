@@ -42,3 +42,20 @@ label{
     font-weight: bold;
 margin-right: 5px;
 }
+
+.card{
+    width: 260px;
+    background-color:#fea994c7;
+    margin: 10px;
+    border-radius: 10px;
+    height: 400px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-end;
+}

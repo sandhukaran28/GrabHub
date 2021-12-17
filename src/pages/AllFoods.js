@@ -34,7 +34,12 @@ function AllFoods() {
           <section className={styles.imageSecton}>
           <img src={Banner} alt="imageFood" />
           </section>
-            <FoodList foods={foods}/>
+          <div className={styles.menu}>
+          <h3>Today's Special</h3>
+          <hr />
+          <FoodList foods={foods}/>
+          </div>
+          
         </div>
     )
 }
