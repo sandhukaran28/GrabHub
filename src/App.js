@@ -12,6 +12,7 @@ import Login from './pages/Auth/Login';
 import { useContext } from 'react'
 import AuthContext from './store/Auth-context';
 import Orders from './pages/Orders';
+import 'bootstrap/dist/css/bootstrap.min.css';
 axios.defaults.withCredentials=true;
 
 function App() {

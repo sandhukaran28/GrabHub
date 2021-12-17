@@ -1,32 +1,40 @@
 import React, { useContext } from 'react'
+import { Navbar, NavbarBrand,Nav} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import Logout from '../../pages/Auth/Logout';
 import AuthContext from '../../store/Auth-context';
 import styles from './MainNavigation.module.css';
-import {Navbar,Nav,Container,NavDropdown} from 'react-bootstrap'
+import logo from '../../assets/logo.png'
 const MainNavigation = () => {
 
 const authCtx = useContext(AuthContext);
 const loggedIn  =authCtx.loggedIn;
 return (
-
- <nav>
-    <ul className={styles.linkUl}>
-        <li><NavLink exact to="/allfoods">Menu</NavLink></li>
+<Navbar className={styles.main}  expand='md'>
+<Navbar.Brand>
+<img src= {logo}/>
+</Navbar.Brand>
+<Navbar.Toggle/>
+<Navbar.Collapse>
+<Nav className={styles.nav}>
+<ul  className={styles.list}>
+    <li> <Nav.Link  className={styles.link}  href="/allfoods">Menu</Nav.Link></li>
         {(loggedIn === true && <>
-            <li><NavLink exact to="/my-cart">Cart</NavLink></li>
-            <li><NavLink exact to="/my-orders">My Orders</NavLink></li>
-           <li><Logout/></li>
+           <li> <Nav.Link  href="/my-cart">Cart</Nav.Link></li>
+            <li><Nav.Link  href="/my-orders">My Orders</Nav.Link></li>
+      <li>  <Logout  className={styles.logBtn} /></li>
         </>)}
-
         {(loggedIn === false && <>
-            <li><NavLink exact to="/admin-foods">Admin Login </NavLink></li>
-            <li><NavLink exact to="/register">Register</NavLink></li>
-        <li><NavLink exact to="/Login">Login</NavLink></li>
+           <li> <Nav.Link  href="/admin-foods">Admin Login </Nav.Link></li>
+           <li> <Nav.Link  href="/register">Register</Nav.Link></li>
+     <li>   <Nav.Link href="/Login">Login</Nav.Link></li>
         </>)}
-    
-    </ul>
-</nav> 
+        </ul>
+</Nav>
+
+</Navbar.Collapse>
+
+</Navbar>
 )
 }
 
