@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+#footer{
+    background-color: tomato;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+#footer h3{
+    margin: 0px auto;
+    width: fit-content;
+    color: white;
+    padding:10px
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
