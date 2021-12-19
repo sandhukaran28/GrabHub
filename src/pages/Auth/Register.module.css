@@ -6,3 +6,97 @@
     background-color: #FEAA94;
     box-shadow: none;
 }
+#outer{
+    display: flex;
+    margin: 20px 5px;
+    height: 50%;
+    margin-bottom: 52px;
+}
+.left{
+    width: 40%;
+}
+.right{
+display: flex;
+align-items: center;
+width: 60%;
+}
+.right div{
+    margin: 0px auto;
+}
+.right h2{
+    font-weight: bold;
+}
+.right label{
+    font-weight: bold;
+}
+.rDiv{
+
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 20%;
+    height: 300px;
+}
+.authInput{
+    width: 100%;
+    background-color: #f3f3f4;
+    outline: none;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 200ms;
+}
+
+.authInput:focus,.authInput:hover{
+    background-color: white;
+    border:2px solid #FEAA94;
+}
+.right form{
+    display: flex;
+    flex-direction: column;
+
+}
+.right form button{
+
+    width: 150px;
+    transform: none !important;
+}
+.right button:hover{
+opacity: 0.5;
+}
+
+
+.authInput :active{
+    background-color: white;
+}
+
+@media screen and (max-width:900px){
+    
+    .left{
+        display: none;
+    }
+    .right{
+        margin-top: 60px;
+        width: 100% !important;
+    }
+    .right form{
+        width: 1005;
+    }
+    .rDiv{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+
+
+     .rDiv{
+        padding: 10px;
+    }
+}
+
+.group{
+    width: 100%;
+    margin-bottom: 30px !important;
+}

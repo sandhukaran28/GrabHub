@@ -41,7 +41,7 @@ button{
     transition: 400ms;
 }
 button:hover{
-    transform: translateY(-7px);
+    opacity: 0.7;
 }
 label{
     font-weight: bold;

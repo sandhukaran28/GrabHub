@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 #footer{
     background-color: tomato;
-    margin: 0px;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin-top: auto;
     width: 100%;
 }
 #footer h3{
@@ -15,3 +21,4 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+
