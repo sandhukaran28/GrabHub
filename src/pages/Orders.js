@@ -1,30 +1,30 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
+import axios from "axios";
+import React, { useEffect } from "react";
 
 const Orders = () => {
-
-    useEffect(()=>{
-
-        async function getOrders(){
-            try{
-           const res =  await axios.get('http://localhost:8000/user/orders');
-                console.log(res.data);
-            }
-            catch(e){
-                console.log(e);
-            }
-
+  useEffect(() => {
+    async function getOrders() {
+      try {
+        const res = await axios.get("http://localhost:8000/user/orders");
+        let items = [];
+        const orders = res.data;
+        for (let order of orders) {
+          items.push(order.orderedItem);
         }
+        console.log(items);
+      } catch (e) {
+        console.log(e);
+      }
+    }
 
-        getOrders();
-    },[])
+    getOrders();
+  }, []);
 
+  return (
+    <div>
+      <h1>Orders</h1>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <h1>Orders</h1>
-        </div>
-    )
-}
-
-export default Orders
+export default Orders;
