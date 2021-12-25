@@ -29,18 +29,12 @@ const MainNavigation = () => {
                   <Nav.Link href="/my-cart">Cart</Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link href="/my-orders">My Orders</Nav.Link>
-                </li>
-                <li>
                   <Logout className={styles.logBtn} />
                 </li>
               </>
             )}
             {loggedIn === false && (
               <>
-                <li>
-                  <Nav.Link href="/admin-foods">Admin Login </Nav.Link>
-                </li>
                 <li>
                   <Nav.Link href="/register">Register</Nav.Link>
                 </li>

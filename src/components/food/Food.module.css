@@ -98,3 +98,11 @@ transition: 600ms;
 .desc{
     font-style: italic;
 }
+
+.option{
+
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+}

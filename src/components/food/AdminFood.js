@@ -16,7 +16,7 @@ const AdminFood = (props) => {
         <p className={style.desc}>{props.desc}</p>
         <p className={style.price}>${props.price}</p>
       </div>
-      <div>
+      <div className={style.option}>
         <button onClick={deleteFood}>Delete</button>
         <Link
           exact

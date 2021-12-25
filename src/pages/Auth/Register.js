@@ -104,7 +104,7 @@ const Register = () => {
                   minLength={6}
                 />
               </div>
-              <button type="submit">Log In</button>
+              <button type="submit">Sign Up</button>
             </form>
           </div>
         </div>

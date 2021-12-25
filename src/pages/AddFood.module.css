@@ -1,7 +1,7 @@
 .outer{
     margin: 100px auto;
     width: 40%;
-    background-color: #d8f3dc;
+    background-color: rgba(204, 204, 204, 0.493);
     padding:20px;
     border-radius: 10px;
 }
@@ -15,15 +15,19 @@
     margin: 0px auto;
     margin-top: 20px;
 }
-.addInput{
-    width: 80%;
-    margin-bottom: 25px;
-    height: 20px;
-    padding: 2px;
-    margin-top: 3px;
+.addInput,textarea{
+    width: 100%;
+    background-color: #f3f3f4;
+    outline: none;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 200ms;
 }
 .outer form button{
     width: 100px;
+    margin-top: 20px;
 }
 .txtArea{
     width: 80%;

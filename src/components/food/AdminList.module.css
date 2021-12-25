@@ -6,5 +6,13 @@
     padding: 16px;
     background-color: white;
     border-radius: 0.8rem;
-    background-color: #d8f3dc;
+    background-color: rgba(204, 204, 204, 0.493);
+}
+
+@media screen and (max-width:950px) {
+    
+    .food-list{
+        width: 95%;
+    }
+   
 }
