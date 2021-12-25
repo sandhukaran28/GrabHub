@@ -10,7 +10,9 @@ function AllFoods() {
   useEffect(() => {
     async function getFoods() {
       try {
-        const res = await axios.get("http://localhost:8000/allfoods");
+        const res = await axios.get(
+          "https://grabhub-api.herokuapp.com/allfoods"
+        );
         setFoods(res.data);
       } catch (e) {
         console.log(e);

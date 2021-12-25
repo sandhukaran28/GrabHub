@@ -61,7 +61,9 @@ export const CartContextProvider = (props) => {
 
   const placeOrderHandler = async () => {
     if (cart.length > 0) {
-      await axios.post("http://localhost:8000/placeorder", { cart });
+      await axios.post("https://grabhub-api.herokuapp.com/placeorder", {
+        cart,
+      });
       setCart(() => {
         return [];
       });

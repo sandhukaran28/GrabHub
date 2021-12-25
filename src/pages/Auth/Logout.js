@@ -7,7 +7,7 @@ const Logout = () => {
   const history = useHistory();
   const cartCtx = useContext(AuthContext);
   const logout = async () => {
-    await axios.get("http://localhost:8000/auth/logout");
+    await axios.get("https://grabhub-api.herokuapp.com/auth/logout");
     await cartCtx.getLoggedIn();
     history.push("/");
   };

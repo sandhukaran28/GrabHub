@@ -44,7 +44,7 @@ const Register = () => {
       passwordVerify: verify,
     };
     await axios
-      .post("http://localhost:8000/auth/new", data)
+      .post("https://grabhub-api.herokuapp.com/auth/new", data)
       .then((res) => {
         console.log(res.data);
         register();

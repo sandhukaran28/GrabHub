@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import style from "./Food.module.css";
 const AdminFood = (props) => {
   const deleteFood = async (e) => {
-    await axios.delete(`http://localhost:8000/delete/${props.id}`);
+    await axios.delete(`https://grabhub-api.herokuapp.com/delete/${props.id}`);
     console.log("sent");
     window.location.reload(false);
   };

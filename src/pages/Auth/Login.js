@@ -37,7 +37,7 @@ const Login = () => {
       password: pass,
     };
     await axios
-      .post("http://localhost:8000/auth/login", data)
+      .post("https://grabhub-api.herokuapp.com/auth/login", data)
       .then(() => {
         console.log("done");
         login();
