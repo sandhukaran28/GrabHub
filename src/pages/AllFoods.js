@@ -11,7 +11,6 @@ function AllFoods() {
     async function getFoods() {
       try {
         const res = await axios.get("http://localhost:8000/allfoods");
-        console.log(res.data);
         setFoods(res.data);
       } catch (e) {
         console.log(e);

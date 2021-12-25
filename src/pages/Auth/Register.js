@@ -27,9 +27,7 @@ const Register = () => {
   const history = useHistory();
   const cartCtx = useContext(AuthContext);
   const UserformSubmit = async (e) => {
-    let err = "";
     e.preventDefault();
-    console.log("here");
     const name = e.target.elements.name.value;
     const email = e.target.elements.email.value;
     const pass = e.target.elements.pass.value;
