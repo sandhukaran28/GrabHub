@@ -39,7 +39,7 @@ const MainNavigation = () => {
                   <Nav.Link href="/register">Register</Nav.Link>
                 </li>
                 <li>
-                  <Nav.Link href="/Login">Login</Nav.Link>
+                  <Nav.Link href="/login">Login</Nav.Link>
                 </li>
               </>
             )}
