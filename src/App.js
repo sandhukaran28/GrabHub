@@ -1,6 +1,6 @@
 import "./App.css";
 import AllFoods from "./pages/AllFoods";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import MyCart from "./pages/MyCart";
 import AdminAllFoods from "./pages/AdminAllFoods";
