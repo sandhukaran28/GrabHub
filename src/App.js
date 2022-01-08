@@ -22,9 +22,6 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact>
-          <Redirect to="/allfoods" />
-        </Route>
-        <Route path="/allfoods">
           <AllFoods />
         </Route>
         {loggedIn === true && (
