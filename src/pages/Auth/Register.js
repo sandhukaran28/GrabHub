@@ -73,6 +73,7 @@ const Register = () => {
                   type="text"
                   name="name"
                   id="name"
+                  required
                 />
               </div>
               <div className={styles.group}>
@@ -82,6 +83,7 @@ const Register = () => {
                   type="email"
                   name="email"
                   id="email"
+                  required
                 />
               </div>
               <div className={styles.group}>
@@ -92,6 +94,7 @@ const Register = () => {
                   name="pass"
                   id="pass"
                   minLength={6}
+                  required
                 />
               </div>
               <div className={styles.group}>
@@ -102,6 +105,7 @@ const Register = () => {
                   name="confirm"
                   id="confirm"
                   minLength={6}
+                  required
                 />
               </div>
               <button type="submit">Sign Up</button>

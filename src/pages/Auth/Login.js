@@ -65,6 +65,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   id="email"
+                  required
                 />
               </div>
               <div className={styles.group}>
@@ -74,6 +75,7 @@ const Login = () => {
                   type="password"
                   name="pass"
                   id="pass"
+                  required
                 />
               </div>
               <button type="submit">Log In</button>
