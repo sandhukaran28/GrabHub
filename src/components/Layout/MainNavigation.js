@@ -19,7 +19,7 @@ const MainNavigation = () => {
           <ul className={styles.list}>
             <li>
               {" "}
-              <Nav.Link className={styles.link} href="/allfoods">
+              <Nav.Link className={styles.link} href="/">
                 Menu
               </Nav.Link>
             </li>

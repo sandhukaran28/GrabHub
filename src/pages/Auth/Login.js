@@ -13,7 +13,7 @@ const Login = () => {
 
   const login = async () => {
     await cartCtx.getLoggedIn();
-    history.push("/");
+    // history.push("/");
   };
 
   const notify = (e) =>
@@ -44,8 +44,8 @@ const Login = () => {
       })
       .catch((e) => {
         console.log(e);
+        notify("Email Or Password may be incorrect");
       });
-    notify("Email Or Password may be incorrect");
   };
 
   return (
