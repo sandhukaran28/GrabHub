@@ -13,7 +13,7 @@ const Login = () => {
 
   const login = async () => {
     await cartCtx.getLoggedIn();
-    // history.push("/");
+    history.push("/");
   };
 
   const notify = (e) =>
@@ -39,7 +39,6 @@ const Login = () => {
     await axios
       .post("https://grabhub-api.herokuapp.com/auth/login", data)
       .then(() => {
-        console.log("done");
         login();
       })
       .catch((e) => {
